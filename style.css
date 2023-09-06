@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #3498db, #1abc9c);
+    font-family: 'Poppins', sans-serif; /* Added font-family for the entire document */
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: white; /* Changed text color to white */
+}
+
+.routine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+img {
+    max-width: 50em;
+    max-height: 30em;
+    position: absolute;
+}
+
+#time-table {
+    top: 8em;
+    left: 0;
+}
+
+#chore {
+    max-height: 70em;
+    max-width: 35em;
+    top: 10em;
+    right: 0;
+}
+
+form {
+    margin-bottom: 5em;
+}
+
+#main {
+    padding-bottom: 1em;
+}
+
+h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.info {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+#note {
+    opacity: 0;
+}
+
+.about {
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.book h2 {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+form {
+    border-radius: 10px;
+}
+
+.fade {
+    animation: fadeIn 1s linear forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: rgb(12, 206, 206);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.department {
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 10rem;
+}
+
+.department::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: aqua;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.department:hover::after {
+    background: white;
+    color: aqua;
+}
+
+#ECE {
+    display: none;
+}
+
+#EE {
+    display: none;
+}
+
+#CSE {
+    display: none;
+}
+
+#IT {
+    display: none;
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        text-align: center;
+    }
+
+    body h1 {
+        font-size: 2rem;
+        margin: 0 1em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    #chore {
+        max-width: 100%;
+        top: 20px;
+    }
+
+    #time-table {
+        bottom: 0;
+        top: 52em;
+    }
+}
